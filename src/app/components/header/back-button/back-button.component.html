@@ -1,0 +1,19 @@
+<div class="{{ backButtonCSSClass }}">
+    @if (backButtonPath) {
+        <div class="{{ backButtonCSSClass }}__back-btn">
+            <mat-icon class="ob-icon" [svgIcon]="'arrow-left'" (click)="navigateBack()">
+                <span class="ob-screen-reader-only">Arrow left</span>
+            </mat-icon>
+        </div>
+    } @else {
+        <img
+            alt="Logo Schweizerische Eidgenossenschaft, zur Startseite der Applikation"
+            width="156"
+            height="38"
+            loading="eager"
+            fetchpriority="high"
+            ngSrc="assets/images/logo.svg"
+            class="ng-star-inserted"
+        />
+    }
+</div>

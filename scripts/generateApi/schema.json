@@ -1,0 +1,131 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "V1",
+    "title": "Raporta KufApi REST API V1"
+  },
+  "host": "localhost:8282",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/v1/money/sdkljasld": {
+      "get": {
+        "tags": [
+          "Dossiers Controller"
+        ],
+        "operationId": "Manay_Get",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Response[List[GetDossier]]"
+            }
+          },
+          "400": {
+            "description": "BadRequest"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "NotFound"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Response[List[GetDossier]]": {
+      "type": "object",
+      "properties": {
+        "MetaData": {
+          "$ref": "#/definitions/MetaData"
+        },
+        "Payload": {
+          "$ref": "#/definitions/Payload[List[GetDossier]]"
+        },
+        "Pagination": {
+          "$ref": "#/definitions/Pagination"
+        }
+      }
+    },
+    "MetaData": {
+      "type": "object",
+      "properties": {
+        "Success": {
+          "$ref": "#/definitions/Success"
+        },
+        "Errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Error"
+          }
+        }
+      }
+    },
+    "Payload[List[GetDossier]]": {
+      "type": "object",
+      "properties": {
+        "Data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GetDossier"
+          }
+        }
+      }
+    },
+    "Pagination": {
+      "type": "object",
+      "properties": {
+        "PageNumber": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "PageSize": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "TotalCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Success": {
+      "type": "object",
+      "properties": {
+        "Message": {
+          "type": "string"
+        }
+      }
+    },
+    "Error": {
+      "type": "object",
+      "properties": {
+        "FieldKey": {
+          "type": "string"
+        },
+        "Message": {
+          "type": "string"
+        }
+      }
+    },
+    "GetDossier": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "DossierNumber": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

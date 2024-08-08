@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BottomBarComponent should render correctly 1`] = `
+<app-bottom-bar
+  componentName={[Function String]}
+>
+  <mat-toolbar
+    class="bottom-bar"
+  />
+</app-bottom-bar>
+`;
