@@ -25,10 +25,8 @@ export class ControlStatusComponent implements OnInit {
         this.state.set(newState);
         const success = callValidFunction(this.callback, newState);
 
-        if (success) {
-            return;
+        if (!success) {
+            this.state.set(oldState);
         }
-
-        this.state.set(oldState);
     }
 }
