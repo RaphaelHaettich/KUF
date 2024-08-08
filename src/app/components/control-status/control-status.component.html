@@ -1,0 +1,30 @@
+<button mat-icon-button obButton="tertiary" type="button" (click)="updateState()">
+    @switch (state()) {
+        @case (states.approved) {
+            <mat-icon
+                class="{{ componentName }}__icon {{ componentName }}__icon--{{ states.approved }}"
+                [svgIcon]="'thumbs-up'"
+            >
+                <span class="ob-screen-reader-only">Check done yet icon</span>
+            </mat-icon>
+        }
+        @case (states.notApproved) {
+            <mat-icon
+                class="{{ componentName }}__icon {{ componentName }}__icon--{{
+                    states.notApproved
+                }}"
+                [svgIcon]="'thumbs-down'"
+            >
+                <span class="ob-screen-reader-only">Check not done yet icon</span>
+            </mat-icon>
+        }
+        @default {
+            <mat-icon
+                class="{{ componentName }}__icon {{ componentName }}__icon--{{ states.notChecked }}"
+                [svgIcon]="'stop'"
+            >
+                <span class="ob-screen-reader-only">Check not done yet icon</span>
+            </mat-icon>
+        }
+    }
+</button>

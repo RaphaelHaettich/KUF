@@ -1,0 +1,76 @@
+@import '@oblique/oblique/styles/scss/core/mixins/typography';
+@import '@oblique/oblique/styles/scss/core/mixins/layout';
+@import '@oblique/oblique/styles/scss/core/variables';
+
+.dossier-detail {
+    &__header {
+        &-title {
+            display: flex;
+            padding-top: 2vh;
+            padding-inline: 2vh;
+            flex-direction: row;
+            gap: $ob-spacing-xs;
+            margin: $ob-spacing-xs;
+            justify-content: space-between;
+        }
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2vh;
+
+            &-left {
+                display: flex;
+                flex-direction: column;
+                gap: $ob-spacing-xs;
+                width: 50%;
+            }
+
+            &-right {
+                gap: $ob-spacing-xs;
+
+                &-icon {
+                    font-size: 7vh;
+                }
+            }
+        }
+    }
+
+    &__accordion {
+        &-panel {
+
+            margin-top: 0.2rem;
+
+            &-header {
+                    font-weight: bold;
+                    border-radius: 4px;
+                    transition: background-color 0.3s;
+            }
+
+            // override the mat-expansion-panel-body padding
+            &::ng-deep .mat-expansion-panel-body {
+                margin-top: 4px;
+                padding: 0;
+            }
+
+            &-content {
+                padding: 0;
+                border-top: none;
+                border-radius: 0 0 4px 4px;
+            }
+        }
+    }
+}
+
+// override the mat-card-content padding
+:host {
+    &::ng-deep {
+        .mat-mdc-card-content:first-child {
+            padding: 0 !important;
+        }
+        .mat-mdc-card .mat-mdc-card-actions {
+            padding: 0 !important;
+        }
+    }
+}

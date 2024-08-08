@@ -1,0 +1,14 @@
+.header {
+	&__title {
+		font-weight: 600;
+	}
+
+	&__subline {
+		font-size: 0.65em;
+	}
+}
+
+.ob-icon {
+	font-family: "Material Icons", serif;
+	content: "\e5cc";
+}

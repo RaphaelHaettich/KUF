@@ -1,0 +1,19 @@
+<div class="{{ componentName }}">
+    <ob-master-layout
+        class="{{ componentName }}__main"
+        [navigation]="[
+            {
+                url: pageRoutes.dossier + '/' + genericRoutes.overview,
+                label: 'Alle Dossiers',
+            },
+        ]"
+    >
+        <ng-template #obHeaderLogo>
+            <app-back-button />
+        </ng-template>
+
+        <ng-container obHeaderTitle>
+            <app-header />
+        </ng-container>
+    </ob-master-layout>
+</div>

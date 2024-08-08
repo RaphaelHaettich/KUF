@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QrScanDialogComponent should test the scanning and component rendering correctly 1`] = `
+[
+  [
+    "deviceId",
+  ],
+]
+`;
+
+exports[`QrScanDialogComponent should test the scanning and component rendering correctly 2`] = `
+[
+  [
+    "qrScanDialogSpinner",
+  ],
+  [
+    "qrScanDialogSpinner",
+  ],
+]
+`;
+
+exports[`QrScanDialogComponent should test the scanning and component rendering correctly 3`] = `
+[
+  [
+    {
+      "message": "Kamera konnte gestartet werden",
+    },
+  ],
+]
+`;
+
+exports[`QrScanDialogComponent should test the scanning and component rendering correctly 4`] = `
+[
+  [
+    "/url",
+  ],
+]
+`;
+
+exports[`QrScanDialogComponent should test the scanning and component rendering correctly 5`] = `
+<app-qr-scan-dialog
+  action={[Function _NgxScannerQrcodeComponent]}
+  componentName={[Function String]}
+  data={[Function Object]}
+  dialog={[Function _MatDialog]}
+  obNotificationService={[Function _ObNotificationService]}
+  spinnerChannel={[Function String]}
+  spinnerService={[Function _ObSpinnerService]}
+  subSink={[Function SubSink]}
+>
+  <div
+    class="qr-scan-dialog__header"
+    mat-dialog-content=""
+  >
+    <h2
+      class="qr-scan-dialog__title"
+      mat-dialog-title=""
+    >
+      title
+    </h2>
+  </div><ob-spinner
+    class="ob-spinner"
+  >
+    <div
+      class="ob-overlay ng-trigger ng-trigger-inOut"
+    >
+      <div
+        class="ob-spinner-viewport"
+      >
+        <svg
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="24"
+            cy="24"
+            fill="none"
+            r="20"
+            stroke="#2F4356"
+            stroke-miterlimit="10"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
+    </div>
+  </ob-spinner><div
+    class="qr-scan-dialog__content"
+    mat-dialog-content=""
+  >
+    <ngx-scanner-qrcode
+      class="ngx-scanner-qrcode"
+    >
+      <div
+        class="origin-overlay"
+      />
+      <canvas
+        class="origin-canvas"
+      />
+      <video
+        class="origin-video"
+        playsinline=""
+      />
+    </ngx-scanner-qrcode>
+  </div><div
+    class="qr-scan-dialog__actions"
+    mat-dialog-actions=""
+  >
+    <button
+      mat-button=""
+      mat-dialog-close=""
+      obbutton="primary"
+      type="button"
+    >
+       i18n.common.close 
+    </button>
+  </div>
+</app-qr-scan-dialog>
+`;
